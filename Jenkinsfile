@@ -1,11 +1,19 @@
 pipeline {
-    agent any
+        agent {
+        docker {
+            //use node image as an agent to run npm commands
+            image 'node:20'
+        }
+    }
+
     stages {
+        
         stage('checkout') {
             steps {
-                git branch: 'master', credentialsId: 'github', url: 'https://github.com/spatiumsoftware/HR-FRONT.git'   
-                echo 'checkouting...'
-            }
+                echo "Checkouting...."
+                git branch: 'dev', credentialsId: 'github-credential', url: 'https://github.com/spatiumsoftware/HR_Frontend-.git'      
+                echo "End Checkouting"
+                }
         }
         
         stage('Install Dependencies') {
