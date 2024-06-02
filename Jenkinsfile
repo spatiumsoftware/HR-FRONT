@@ -11,7 +11,7 @@ pipeline {
         stage('checkout') {
             steps {
                 echo "Checkouting...."
-                git branch: 'dev', credentialsId: 'github-credential', url: 'https://github.com/spatiumsoftware/HR_Frontend-.git'      
+                git branch: 'master', credentialsId: 'github', url: 'https://github.com/spatiumsoftware/HR-FRONT.git'      
                 echo "End Checkouting"
                 }
         }
