@@ -1,0 +1,31 @@
+.input{
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+}
+select{
+    height: 48px;
+    border-radius: 36px;
+    outline: none;
+    border: 1px solid #EDF0F2;
+    background:  #FFF;
+    padding: 12px 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    appearance: none;
+    color: #939598;
+
+ }
+ input::placeholder{
+    color: #64748B;
+    font-size: 16px;
+    font-weight: 500;
+ }
+ label{
+    color: #101218;
+    font-weight: 500;
+    font-size: 14px;
+ }

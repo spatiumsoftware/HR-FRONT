@@ -1,0 +1,107 @@
+
+
+.col-8 {
+  flex-grow: 1;
+}
+.col-5 {
+  flex-grow: 1;
+}
+
+.row {
+  column-gap: 24px;
+  
+
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+
+/*chart card*/
+
+@media screen and (max-width: 1600px) and (min-width: 992px) {
+  .row {
+    flex-wrap: wrap;
+  }
+  .col-3 {
+    width: 48%;
+    margin: auto;
+  }
+  .col-5 {
+    width: 48%;
+    flex-grow: 0;
+
+    margin: auto;
+  }
+  .col-8 {
+    width: 48%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 786px) {
+
+  .row {
+    row-gap: 24px;
+  }
+  .col-3 {
+    width: 80%;
+    margin: auto;
+  }
+  .col-5 {
+    width: 80%;
+    margin: auto;
+    flex-grow: 0;
+  }
+  .col-8 {
+    width: 80%;
+    margin: auto;
+    flex-grow: 0;
+  }
+}
+
+@media screen and (max-width: 786px) and (min-width: 600px) {
+
+  .row {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  .col-3 {
+    width: 90%;
+
+    margin: auto;
+  }
+  .col-5 {
+    width: 90%;
+    margin: auto;
+    flex-grow: 0;
+  }
+  .col-8 {
+    width: 90%;
+    margin: auto;
+    flex-grow: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .row {
+    flex-direction: column;
+    row-gap: 24px;
+    width: 100%;
+    margin: 0;
+  }
+  .col-3 {
+    width: 90%;
+    margin: auto;
+  }
+  .col-5 {
+    width: 90%;
+    flex-grow: 0;
+    margin: auto;
+  }
+  .col-8 {
+    width: 90%;
+    margin: auto;
+    flex-grow: 0;
+  }
+  
+}

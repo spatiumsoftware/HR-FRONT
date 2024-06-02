@@ -1,0 +1,41 @@
+<p-card>
+  <div class="img-container">
+    <img [src]="company.logoPath" alt="">
+  </div>
+  <h2>{{company.name}}</h2>
+  <div class="content-container" [ngClass]="{ gray : subsidiary }">
+    <div class="content">
+      <div class="inner-content">
+        <p>Company Type</p>
+        <p>{{company.companyType}}</p>
+      </div>
+      <div class="inner-content">
+        <p>Employees No.</p>
+        <p>{{company.employeeNumber}}</p>
+      </div>
+      <div class="inner-content">
+        <p>CEO</p>
+        <p>{{company.ceo}}</p>
+      </div>
+
+
+      <div class="inner-content">
+        <p>Registration No.</p>
+        <p>{{company.commerialRegisterationNumber}}</p>
+      </div>
+      <div class="inner-content">
+        <p>Performance</p>
+
+        <div class="chart">
+          <div class="circle">
+            <div class="inner-circle"></div>
+          </div>
+
+          <p>rrrrrr</p>
+        </div>
+      </div>
+      <div class="inner-content"></div>
+    </div>
+    <app-button [Text]="'View Details'" [btnClass]="currentStyles"></app-button>
+  </div>
+</p-card>

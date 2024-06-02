@@ -1,0 +1,50 @@
+<nav>
+  <a routerLink="/companyProfile/details/lol/overview" routerLinkActive="active"
+    >Overview</a
+  >
+  <a
+    routerLink="/companyProfile/details/lol/departments"
+    routerLinkActive="active"
+    >Departments</a
+  >
+  <a
+    routerLink="/companyProfile/details/lol/employees"
+    routerLinkActive="active"
+    >Employees</a
+  >
+  <a routerLink="/companyProfile/details/lol/jobs" routerLinkActive="active"
+    >Jobs</a
+  >
+  <a routerLink="/companyProfile/details/lol/policies" routerLinkActive="active"
+    >Policies</a
+  >
+  <a routerLink="/companyProfile/details/lol/orgChart" routerLinkActive="active"
+    >Org Chart</a
+  >
+
+  <p-sidebar [(visible)]="isclose" position="right">
+    <div class="form-header">
+      <div class="title">
+        <h2>Edit a Company</h2>
+        <p>Please add information below</p>
+      </div>
+      <p-button
+        i="pi pi-close"
+        styleClass="btn-close"
+        (click)="isclose = false"
+      ></p-button>
+    </div>
+    <app-company-info-form></app-company-info-form>
+  </p-sidebar>
+
+  <div class="edit-btn">
+    <p-button
+      type="button"
+      class="mr-2"
+      label="Edit Company"
+      (click)="isclose = true"
+    >
+      <img src="../../../../../assets/images/company/SVG/editicon.svg" alt="" />
+    </p-button>
+  </div>
+</nav>

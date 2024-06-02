@@ -1,0 +1,12 @@
+<app-sortheader (display)="display = $event"></app-sortheader>
+<div class="row">
+  @if(display === 'row'){ @for (item of companies; track $index) {
+  <div class="col">
+    <app-row-company-card [company]="item"></app-row-company-card>
+  </div>
+  } }@else{ @for (item of companies; track $index) {
+  <div class="col-3">
+    <app-column-company-card [company]="item"></app-column-company-card>
+  </div>
+  } }
+</div>

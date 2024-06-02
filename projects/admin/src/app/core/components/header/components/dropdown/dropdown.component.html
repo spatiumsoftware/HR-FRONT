@@ -1,0 +1,26 @@
+<!-- drop down start  -->
+
+<div (click)="menu.toggle($event)" class="big-menu">
+  @if (selectedUser) {
+    <div class="d-flex align-items-center gap-2">
+      <img [src]="selectedUser.image" class="img" />
+      <div class="lang">{{ selectedUser.name }}</div>
+    </div>
+  }
+  <img
+    alt="dropdown icon"
+    src="../../../../../assets/images/company/SVG/chevron-down.svg"
+  />
+  <p-menu #menu [model]="items" [popup]="true" />
+</div>
+
+<div class="small-menu" (click)="menu2.toggle($event)">
+  @if (selectedUser) {
+    <div class="d-flex align-items-center gap-2">
+      <img [src]="selectedUser.image" class="img" />
+    </div>
+  }
+  <p-menu #menu2 [model]="items" [popup]="true" />
+</div>
+
+<!-- drop down end  -->

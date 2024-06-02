@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+nav {
+  background-color: #fff;
+  padding: 12px 40px;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  flex-shrink: 0;
+}
+nav a {
+  color: #64748b;
+  transition: all 0.5s ease-in-out;
+  padding: 12px 16px;
+  display: flex;
+  flex-shrink: 0;
+}
+nav a:hover {
+  background: #c0fdf1;
+
+  border-radius: 36px;
+  font-weight: 600;
+  color: #101218;
+}
+.active {
+  background: #c0fdf1;
+
+  border-radius: 36px;
+  font-weight: 600;
+  color: #101218;
+}
+
+:host ::ng-deep .p-sidebar {
+  width: 800px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #101218;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  .form-header {
+    background-color: #edf2f7;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  p {
+    color: #64748b;
+  }
+  .p-sidebar-close {
+    display: none;
+  }
+  .btn-close {
+    display: block;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
+}
+:host ::ng-deep .p-button {
+  width: 168px;
+  height: 48px;
+  border-radius: 36px;
+  border: 1px solid #0acba7;
+  padding: 12px 20px;
+  color: #0acba7;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+}
+.edit-btn {
+  margin-left: auto;
+}
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  nav {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 786px) {
+  nav {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+
+  :host ::ng-deep .p-sidebar {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 786px) and (min-width: 600px) {
+  nav {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+  :host ::ng-deep .p-sidebar {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+  :host ::ng-deep .p-sidebar {
+    width: 300px;
+    .form-header {
+      flex-direction: column-reverse;
+      row-gap: 24px;
+    }
+  }
+}

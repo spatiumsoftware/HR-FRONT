@@ -1,0 +1,114 @@
+<form>
+  <div class="logo-container">
+    <div class="logo">
+      <img src="../../../../assets/images/company/Ava (PNG).png" alt="" />
+    </div>
+    <div class="btn-container">
+      <div class="btns">
+        <app-button [Text]="'Upload'" [btnClass]="green"></app-button>
+      </div>
+      <div class="btns">
+        <app-button [Text]="'Remove'" [btnClass]="gray"></app-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-head">
+    <app-input
+      [lable]="'Company Name'"
+      [placeholder]="'Enter Company Name'"
+      [type]="'text'"
+    ></app-input>
+
+    <!--selecttttttt-->
+
+    <p-dropdown
+      [options]="countries"
+      [(ngModel)]="selectedCountry"
+      [ngModelOptions]="{ standalone: true }"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      [showClear]="true"
+      placeholder="Select a Country"
+    >
+      <ng-template pTemplate="selectedItem" let-selectedOption>
+        <div class="flex align-items-center gap-2">
+          <div>{{ selectedOption.name }}</div>
+        </div>
+      </ng-template>
+      <ng-template let-country pTemplate="item">
+        <div class="flex align-items-center gap-2">
+          <div class="name">{{ country.name }}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+  </div>
+  <!-- <app-select
+      [lable]="'Company Category'"
+      [options]="companycatiegories"
+    ></app-select> -->
+  <app-textarea
+    [lable]="'Company Description'"
+    [placeholder]="'Enter Company Description'"
+  ></app-textarea>
+
+  <div class="form-footer">
+    <div class="inputs-container">
+      <div>
+        <app-input
+          [lable]="'Company Name'"
+          [placeholder]="'Enter Company Name'"
+          [type]="'text'"
+          [disabled]="true"
+        >
+        </app-input>
+      </div>
+      <div>
+        <app-input
+          [lable]="'Company Name'"
+          [placeholder]="'Enter Company Name'"
+          [type]="'text'"
+          [disabled]="true"
+        ></app-input>
+      </div>
+    </div>
+    <div class="inputs-container">
+      <div>
+        <app-input
+          [lable]="'Company Name'"
+          [placeholder]="'Enter Company Name'"
+          [type]="'text'"
+          [disabled]="true"
+        ></app-input>
+      </div>
+      <div>
+        <app-input
+          [lable]="'Company Name'"
+          [placeholder]="'Enter Company Name'"
+          [type]="'text'"
+          [disabled]="true"
+        ></app-input>
+      </div>
+    </div>
+
+    <div class="inputs-container">
+      <div>
+        <app-input
+          [lable]="'Company Name'"
+          [placeholder]="'Enter Company Name'"
+          [type]="'text'"
+          [disabled]="true"
+        ></app-input>
+      </div>
+      <div>
+        <app-input
+          [lable]="'Company Name'"
+          [placeholder]="'Enter Company Name'"
+          [type]="'text'"
+          [disabled]="true"
+        ></app-input>
+      </div>
+    </div>
+  </div>
+</form>

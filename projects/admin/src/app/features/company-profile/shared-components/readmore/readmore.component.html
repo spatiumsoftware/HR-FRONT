@@ -1,0 +1,13 @@
+<div>
+    @if (text.length <= wordLimit) {
+        <p>{{ text }}</p>
+      }
+      
+      @if (text.length > wordLimit && !showMore) {
+        <p>{{ text.substring(0, wordLimit) }}...</p>
+        <p class="readmore" (click)="showMore = true">ReadMore</p>
+      }
+      @if (text.length > wordLimit && showMore) {
+        <p class="full">{{ text }}</p>
+      }
+</div>

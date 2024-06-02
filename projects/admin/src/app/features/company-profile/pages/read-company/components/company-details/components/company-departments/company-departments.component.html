@@ -1,0 +1,12 @@
+<div class="depts-container">
+  <div class="row g-2">
+    @for (item of depts; track $index) {
+    <div class="col-3">
+      <app-department-card
+        [deptobj]="item"
+        [main]="item.companyType === 'Main'"
+      ></app-department-card>
+    </div>
+    }
+  </div>
+</div>

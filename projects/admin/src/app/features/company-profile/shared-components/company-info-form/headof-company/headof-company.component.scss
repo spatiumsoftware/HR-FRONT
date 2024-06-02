@@ -1,0 +1,59 @@
+form{
+  
+    padding: 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    transition: all 0.5s ease-in-out;
+}
+// styling the dropdown
+:host ::ng-deep .p-dropdown {
+    border-radius: 36px !important;
+    border: 1px solid  #EDF0F2;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    outline: none;
+    box-shadow: none;
+    .icon
+    {
+        width: 20px;
+        height: 20px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li>div{
+        padding: 15px;
+        
+    }
+   
+    .p-dropdown-clear-icon.p-icon {
+      display: none;
+    }
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      color: #101218;
+    }
+    span.p-element.p-dropdown-label.p-inputtext {
+      padding: 7px 10px;
+      display: flex;
+   
+      align-items: center;
+    }
+   
+    .p-dropdown-trigger {
+      width: 35px;
+    }
+    img {
+      border-radius: 50% !important;
+      width: 28px;
+      height: 28px;
+    }
+
+    
+  }
+  

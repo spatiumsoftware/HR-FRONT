@@ -1,0 +1,18 @@
+<div class="d-flex" style="width: 100%">
+  <app-sidebar />
+  <div class="flex-grow-1">
+    <app-header />
+    <router-outlet />
+  </div>
+</div>
+<!-- toaster -->
+<p-toast
+  [breakpoints]="{
+    'calc(676rem / 16)': { width: '95%', right: '2.5%', left: '2.5%' }
+  }"
+  [showTransformOptions]="'translateY(100%)'"
+  [showTransitionOptions]="'800ms'"
+  [hideTransitionOptions]="'800ms'"
+  [showTransformOptions]="'translateX(100%)'"
+/>
+<!-- <app-company-info-form></app-company-info-form> -->

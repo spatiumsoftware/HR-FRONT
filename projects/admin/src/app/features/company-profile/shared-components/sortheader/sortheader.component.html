@@ -1,0 +1,21 @@
+<div class="header">
+  <div class="left">
+    <div class="toggle-container">
+      <div
+        class="circle"
+        [ngClass]="{ active: active === 'row' }"
+        (click)="[display.emit('row'), (active = 'row')]"
+      >
+        <div class="img row"></div>
+      </div>
+      <div
+        class="circle"
+        [ngClass]="{ active: active === 'col' }"
+        (click)="[display.emit('col'), (active = 'col')]"
+      >
+        <div class="img column"></div>
+      </div>
+    </div>
+    <div class="sort">sort</div>
+  </div>
+</div>

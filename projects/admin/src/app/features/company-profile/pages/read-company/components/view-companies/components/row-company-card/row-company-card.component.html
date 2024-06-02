@@ -1,0 +1,51 @@
+<div class="row-card" [ngClass]="{ gray : main}">
+  <div class="img-container" >
+    <img [src]="company.logoPath" alt="" >
+  </div>
+  
+  <div class="card-body" >
+    
+      <div class="right">
+        
+      <div class="inner-content title">
+        <p>{{company.name}}</p>
+        <p></p>
+      </div>
+      <div class="middle">
+        <div class="inner-content">
+          <p>Company Type</p>
+          <p>{{company.companyType}}</p>
+        </div>
+        <div class="inner-content">
+          <p>Employees No.</p>
+          <p>{{company.employeeNumber}}</p>
+        </div>
+        <div class="inner-content">
+          <p>CEO</p>
+          <p>{{company.ceo}}</p>
+        </div>
+        <div class="inner-content">
+          <p>Registration No.</p>
+          <p>{{company.commerialRegisterationNumber}}</p>
+        </div>
+        <div class="inner-content">
+          <p>Performance</p>
+  
+          <div class="chart">
+            <div class="circle">
+              <div class="inner-circle"></div>
+            </div>
+  
+            <p>rrr</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="view-btn">
+        <app-button [Text]="'View Details'" [btnClass]="main_btn"></app-button>
+      </div>
+
+
+    
+  </div>
+</div>

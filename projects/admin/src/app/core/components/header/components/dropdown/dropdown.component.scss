@@ -1,0 +1,76 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.big-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 36px;
+  width: 175px;
+  height: 48px;
+}
+// styling the dropdown
+:host ::ng-deep .p-menu{
+
+  width: 175px;
+ 
+
+ 
+ 
+
+  ul {
+    margin: 0;
+    padding: 0;
+    
+  }
+  li{
+    margin: 0;
+    padding: 15px;
+  }
+
+
+
+
+}
+.small-menu{
+  display: none ;
+  
+}
+@media screen and (max-width: 1200px) and (min-width:992px) {
+
+ 
+     
+}
+
+@media screen and (max-width: 992px) and (min-width:786px) {
+
+  .big-menu{
+    display: none;
+  }
+  .small-menu{
+    display: block ;
+  }
+}
+
+@media screen and (max-width: 786px) and (min-width:600px) {
+  .big-menu{
+    display: none;
+  }
+  .small-menu{
+    display: block ;
+  }
+}
+@media screen and (max-width: 600px) {
+
+  .big-menu{
+    display: none;
+  }
+  .small-menu{
+    display: block ;
+  }
+}
+

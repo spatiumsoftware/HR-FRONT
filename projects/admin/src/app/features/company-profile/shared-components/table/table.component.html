@@ -1,0 +1,52 @@
+<div class="table-div">
+  <p-table [value]="data" [tableStyle]="{ 'min-width': '60rem' }" (onSort)="onSort($event)">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="code">
+          {{ headers.code }}
+        </th>
+        <th pSortableColumn="name">
+          <p-sortIcon field="name" />
+          {{ headers.name }}
+        </th>
+        <th pSortableColumn="department">
+          <p-sortIcon field="department" />
+          {{ headers.department }}
+        </th>
+        <th pSortableColumn="occupation">
+          <p-sortIcon field="occupation" />
+          {{ headers.occupation }}
+        </th>
+        <th pSortableColumn="jobposition">
+          <p-sortIcon field="jobposition" />
+          {{ headers.jobposition }}
+        </th>
+        <th [pSortableColumn]="headers.performance">
+          <p-sortIcon [field]="headers.performance" />
+          {{ headers.performance }}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-info>
+      <tr>
+        <td>{{ info.code }}</td>
+        <td>
+          <div class="user-info">
+            <img [src]="info.img" alt="" />
+            <div class="info-text">
+              <p>{{ info.name }}</p>
+              <p>{{ info.id }}</p>
+            </div>
+          </div>
+        </td>
+        <td><div class="dept">
+            <img [src]="info.deptimg" alt="">
+            {{ info.Department }}
+        </div></td>
+        <td>{{ info.Occupation }}</td>
+        <td>{{ info.Jobposition }}</td>
+        <td>{{ info.Performance }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

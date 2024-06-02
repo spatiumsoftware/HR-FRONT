@@ -1,0 +1,118 @@
+/*STEPPER*/
+.stepper-container {
+  width: 100%;
+}
+.card {
+  border: none;
+}
+:host ::ng-deep .p-stepper-nav {
+  padding-right: 12rem;
+  margin-top: 32px;
+  li {
+    column-gap: 10px;
+    margin-right: 10px;
+  }
+  .p-stepper-number {
+    border: 1px solid #edf0f2;
+    color: #64748b;
+    font-size: 12px;
+  }
+  .p-stepper-title {
+    font-size: 14px;
+    color: #64748b;
+    margin-left: 10px;
+  }
+  .p-highlight {
+    color: #0acba7;
+  }
+}
+:host ::ng-deep .p-stepper .p-stepper-header.p-highlight .p-stepper-number {
+  background: #0acba7;
+  color: #fff;
+}
+:host
+  ::ng-deep
+  .p-stepper
+  .p-stepper-header:has(~ .p-highlight)
+  .p-stepper-separator {
+  background-color: #b8c1cc;
+}
+:host ::ng-deep .p-stepper .p-stepper-header.p-highlight .p-stepper-title {
+  color: #0acba7;
+}
+:host ::ng-deep .p-button {
+  width: 160px;
+  height: 56px;
+  border-radius: 36px;
+  background-color: #0acba7;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #0acba7;
+    color: #0acba7;
+  }
+}
+:host ::ng-deep .p-button.cancel-btn {
+  width: 160px;
+  height: 56px;
+  border-radius: 36px;
+  background-color: transparent;
+  color: #0acba7;
+  border: 1px solid #0acba7;
+  box-shadow: none;
+
+  &:hover {
+    background-color: #0acba7;
+    color: #ffffff;
+  }
+}
+:host ::ng-deep .p-button.previous-btn {
+  background-color: transparent;
+  color: #64748b;
+  border: none;
+  margin-right: auto;
+
+  &:hover {
+    border: none;
+  }
+}
+:host ::ng-deep .p-button-label {
+  flex: unset;
+}
+:host ::ng-deep.btns-container {
+  margin-left: auto;
+  display: flex !important;
+}
+.btns-conatiner {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+}
+
+@media screen and (max-width: 992px) and (min-width: 800px) {
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .stepper-container {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stepper-container {
+    width: 300px;
+  }
+  .btns-conatiner{
+    display: flex;
+    flex-direction: column;
+  }
+  .forms-btns {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}

@@ -1,0 +1,42 @@
+<form >
+
+    <p>Please add your company details by filling in your company information below </p>
+     <!-- drop down start  -->
+<p-dropdown
+
+[options]="countries"
+
+
+>
+<ng-template pTemplate="dropdownicon">
+<img class="icon"
+alt="dropdown icon"
+src="../../../../../assets/images/company/SVG/chevron-down.svg"
+/>
+</ng-template>
+
+<ng-template pTemplate="selectedItem">
+@if (selectedCountry) 
+{
+<div class="d-flex align-items-center gap-2">
+<img [src]="selectedCountry.image" class="img" />
+<div class="text">{{ selectedCountry.lang }}</div>
+</div>
+}
+</ng-template>
+<ng-template let-country pTemplate="item">
+<div class="d-flex align-items-center gap-2 " >
+<img [src]="country.image"  />
+<div class="text">{{ country.lang }}</div>
+</div>
+</ng-template>
+<ng-template let-country pTemplate="item">
+<div class="d-flex align-items-center gap-2">
+<img [src]="country.image"  />
+<div class="text">{{ country.lang }}</div>
+</div>
+</ng-template>
+</p-dropdown>
+<!-- drop down end  -->
+
+</form>

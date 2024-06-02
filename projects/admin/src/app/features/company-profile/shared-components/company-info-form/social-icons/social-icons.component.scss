@@ -1,0 +1,91 @@
+ /*social form*/
+ form{
+    // width: 800px;
+    padding: 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    transition: all 0.5s ease-in-out;
+}
+
+ :host ::ng-deep .p-inputgroup{
+    border-radius: 36px;
+    border: 1px solid #EDF0F2;
+    height: 48px;
+
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+
+  }
+  input{
+    width: 100%;
+    border-radius: 36px;
+    outline: none;
+    border: none;
+
+  }
+  :host ::ng-deep .p-inputgroup-addon {
+    background-color: #fff;
+    border: none;
+    border-top-left-radius: 36px;
+    border-bottom-left-radius: 36px;
+    padding: 0 16px;
+
+
+
+
+  }
+  .inputs-container{
+    
+    display: flex;
+    column-gap: 24px;
+}
+.inputs-container>div{
+    width: 50%;
+}
+  .input{
+    display:flex;
+    flex-direction: column;
+    row-gap: 10px;
+    label{
+        color: #101218;
+        font-size: 14px;
+        font-weight: 500;
+    }
+  }
+  .hr{
+    width: 1px;
+    height: 36px;
+    background-color: #EDF0F2;
+  
+  }
+  @media screen and (max-width: 1200px) and (min-width:992px) {
+
+    
+  }
+  
+  @media screen and (max-width: 992px) and (min-width:800px) {
+     
+  }
+  
+  @media screen and (max-width: 800px) and (min-width:600px) {
+    
+    
+  
+  }
+  
+  @media screen and (max-width: 600px){
+      
+   .inputs-container{
+          display: flex;
+          flex-direction: column;
+          row-gap: 24px;
+  }
+      .inputs-container>div{
+  
+          width: 100%;
+      }
+   
+  }

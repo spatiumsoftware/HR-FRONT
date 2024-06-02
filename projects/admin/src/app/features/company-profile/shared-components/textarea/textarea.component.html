@@ -1,0 +1,19 @@
+<div class="textarea">
+  <div class="input">
+    <label for="">{{ lable }}</label>
+    <textarea
+      [(ngModel)]="text"
+      [placeholder]="placeholder"
+      (input)="updateCharacterCount()"
+      maxlength="1000"
+      rows="5"
+      cols="30"
+    >
+    </textarea>
+    <div class="count">
+        <span [ngStyle]="{'color': charCount > 0 ? '#101218' : '#B8C1CC'}">{{ charCount }}</span> 
+        /1000 
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,122 @@
+<div class="stepper-container">
+  <div class="card">
+    <p-stepper [linear]="true">
+      <p-stepperPanel header="Company Details">
+       <ng-template
+          pTemplate="content"
+          let-prevCallback="prevCallback"
+          let-nextCallback="nextCallback"
+          let-index="index"
+        >
+          <div class="flex flex-column h-12rem">
+            <div
+              class="flex-auto flex justify-content-center align-items-center font-medium"
+            >
+           <app-details></app-details>
+            </div>
+          </div>
+          <div
+            class="forms-btns flex pt-4 pb-4 justify-content-between"
+            style="display: flex; margin-right: 40px"
+          >
+            <p-button
+              label="Previous"
+              (onClick)="prevCallback.emit()"
+              styleClass="previous-btn"
+            >
+              <img
+                src="../../../../../assets/images/company/SVG/arrow-leftsvg.svg"
+                alt=""
+              />
+            </p-button>
+
+            <div class="btns-conatiner">
+              <p-button
+                label="Cancel"
+                (onClick)="nextCallback.emit()"
+                styleClass="cancel-btn"
+              ></p-button>
+
+              <p-button label="Next" (onClick)="nextCallback.emit()"></p-button>
+            </div>
+          </div>
+        </ng-template>
+      </p-stepperPanel>
+      <p-stepperPanel header="Head of Company">
+        <ng-template
+          pTemplate="content"
+          let-prevCallback="prevCallback"
+          let-nextCallback="nextCallback"
+          let-index="index"
+        >
+          <div class="flex flex-column h-12rem">
+            <div
+              class="flex-auto flex justify-content-center align-items-center font-medium"
+            >
+              <app-headof-company></app-headof-company>
+            </div>
+          </div>
+          <div
+            class="forms-btns flex pt-4 pb-4 justify-content-between"
+            style="display: flex; margin-right: 40px"
+          >
+            <p-button
+              label="Previous"
+              (onClick)="prevCallback.emit()"
+              styleClass="previous-btn"
+            >
+              <img
+                src="../../../../../assets/images/company/SVG/arrow-leftsvg.svg"
+                alt=""
+              />
+            </p-button>
+
+            <div class="btns-conatiner">
+              <p-button
+                label="Cancel"
+                (onClick)="nextCallback.emit()"
+                styleClass="cancel-btn"
+              ></p-button>
+
+              <p-button label="Next" (onClick)="nextCallback.emit()"></p-button>
+            </div>
+          </div>
+        </ng-template>
+      </p-stepperPanel>
+      <p-stepperPanel header="Additional">
+        <ng-template
+          pTemplate="content"
+          let-prevCallback="prevCallback"
+          let-index="index"
+        >
+          <div class="flex flex-column h-12rem">
+            <div
+              class="flex-auto flex justify-content-center align-items-center font-medium"
+            >
+              <app-social-icons></app-social-icons>
+            </div>
+          </div>
+          <div
+            class="flex pt-4 pb-4 justify-content-between"
+            style="display: flex; margin-right: 40px"
+          >
+            <p-button
+              label="Previous"
+              (onClick)="prevCallback.emit()"
+              styleClass="previous-btn"
+            >
+              <img
+                src="../../../../../assets/images/company/SVG/arrow-leftsvg.svg"
+                alt=""
+              />
+            </p-button>
+            <div class="btns-conatiner">
+              <p-button label="Cancel" styleClass="cancel-btn"></p-button>
+              <p-button label="Save Changes"></p-button>
+            </div>
+          </div>
+        </ng-template>
+      </p-stepperPanel>
+    </p-stepper>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+<p-card>
+  <div class="card-head">
+    <div class="img-container">
+      <img [src]="deptobj.image" alt="" />
+    </div>
+    <div class="head-text">
+      <div class="d-flex justify-content-between">
+        <h2>{{ deptobj.name }}</h2>
+      
+      </div>
+      <div class="btns-container">
+     <div class="view-detailbtn">
+      <app-button
+      style="font-size: 12px;"
+      [Text]="'View Details'"
+      [btnClass]="currentStyles"
+    ></app-button>
+     </div>
+      <div class="sub-departmentbtn">
+        <app-button styleclass="font" 
+        [Text]="'Sub-Department'"
+        [btnClass]="buttonstyles"
+        [img]="'../../../../../assets/images/company/SVG/send.svg'"
+      ></app-button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-container" [ngClass]="{ green: main }">
+    <div class="content">
+      <div class="inner-content">
+        <p>Company Type</p>
+        <p>{{ deptobj.companyType }}</p>
+      </div>
+      <div class="inner-content">
+        <p>Employees No.</p>
+        <p>{{ deptobj.employees }}</p>
+      </div>
+      <div class="inner-content">
+        <p>CEO</p>
+        <p>{{ deptobj.ceo }}</p>
+      </div>
+  
+    
+      <div class="inner-content">
+        <p>Registration No.</p>
+        <p>{{ deptobj.registrationNo }}</p>
+      </div>
+      <div class="inner-content">
+        <p>Performance</p>
+
+        <p-knob
+          [(ngModel)]="value"
+          [readonly]="true"
+          valueColor="#0ACBA7"
+          rangeColor="#F9B60A"
+        />
+
+      </div>
+      <div class="inner-content"></div>
+    </div>
+  </div>
+
+  <div class="menu-container" (click)="isshow=!isshow">
+    <div class="toggle" >
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+ 
+  </div>
+@if (isshow) {
+  <div class="menu-list">
+    <ul>
+      <li> <div class="img edit"></div>  Edit</li>
+      <li> <div class="img add"></div>  Add sub-department</li>
+      <li class="del"> <div class="delete"></div>  Delete</li>
+    </ul>
+  </div>
+}
+
+</p-card>

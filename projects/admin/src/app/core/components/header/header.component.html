@@ -1,0 +1,114 @@
+@if(false){
+<header>
+  <div class="content">
+    <a>{{ "header.services" | translate }}</a>
+    <a>{{ "header.faq" | translate }}</a>
+    <!-- drop down start  -->
+    <p-dropdown
+      (onChange)="onChange($event)"
+      [options]="countries"
+      [(ngModel)]="selectedCountry"
+      placeholder="Select a Country"
+    >
+      <ng-template pTemplate="dropdownicon">
+        <img
+          alt="dropdown icon"
+          src="../../../../assets/images/languages/caret-down.svg"
+        />
+      </ng-template>
+
+      <ng-template pTemplate="selectedItem">
+        <div class="d-flex align-items-center gap-2" *ngIf="selectedCountry">
+          <img [src]="selectedCountry.image" style="width: 18px" />
+          <div class="lang">{{ selectedCountry.lang }}</div>
+        </div>
+      </ng-template>
+      <ng-template let-country pTemplate="item">
+        <div class="d-flex align-items-center gap-2">
+          <img [src]="country.image" style="width: 18px" />
+          <div class="lang">{{ country.lang }}</div>
+        </div>
+      </ng-template>
+      <ng-template let-country pTemplate="item">
+        <div class="d-flex align-items-center gap-2">
+          <img [src]="country.image" style="width: 18px" />
+          <div class="lang">{{ country.lang }}</div>
+        </div>
+      </ng-template>
+    </p-dropdown>
+    <!-- drop down end  -->
+  </div>
+</header>
+
+}@else {
+<div class="header">
+  <div class="toggle">
+    <img
+      src="../../../../../assets/images/company/SVG/bars-staggered (2) 1.svg"
+      alt=""
+    />
+  </div>
+  <div class="links">
+    <div class="back">
+      <div class="arrow-left"></div>
+
+      <a href="">Back</a>
+    </div>
+    <div class="title-link">
+      <a href="">Zendesk</a>/
+      <a href="">Details</a>
+    </div>
+  </div>
+
+  <div class="right">
+    <p-iconField iconPosition="left">
+      <p-inputIcon styleClass="pi pi-search" />
+      <input type="text" pInputText placeholder="Search" />
+    </p-iconField>
+
+    <div class="switch-container">
+      <div class="title" (click)="visible = !visible">
+        <div class="circle">
+          <svg
+            width="14"
+            height="10"
+            viewBox="0 0 14 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_2988_13481)">
+              <path
+                d="M6.5245 2.81376V9.78612H0.75L6.5245 2.81376ZM6.5245 0.3125C6.5245 1.90591 5.23376 3.19665 3.64034 3.19665C2.04693 3.19665 0.75 1.90591 0.75 0.3125H6.5245ZM7.47568 9.78639C7.47568 8.19298 8.76642 6.90224 10.3598 6.90224C11.9532 6.90224 13.244 8.19298 13.244 9.78639H7.47568ZM7.47568 7.28513V0.3125H13.25L7.47568 7.28513Z"
+                fill="#03363D"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_2988_13481">
+                <rect
+                  width="12.5"
+                  height="9.475"
+                  fill="white"
+                  transform="translate(0.75 0.3125)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <p>Zendesk</p>
+      </div>
+      @if (visible) {
+      <div class="overlay" (click)="visible = !visible"></div>
+      <div class="switch">
+        <a href="">Switch Company</a>
+      </div>
+      }
+    </div>
+    <p class="panel">Manager Panel</p>
+    <div class="notification">
+      <div class="bell"></div>
+    </div>
+    <app-dropdown></app-dropdown>
+  </div>
+</div>
+
+}

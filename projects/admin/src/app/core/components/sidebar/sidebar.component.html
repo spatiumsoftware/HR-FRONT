@@ -1,0 +1,188 @@
+<div class="side-bar" [ngClass]="!collapsed() ? 'full-width' : 'collapse'">
+  <div
+    class="logo-container"
+    [ngClass]="!collapsed() ? 'full-width' : 'collapse'"
+  >
+    <div class="logo"></div>
+    <div class="switch-icon" (click)="collapsed.set(!collapsed())">
+      <svg
+        width="32"
+        height="24"
+        viewBox="0 0 32 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="32" height="24" rx="4" fill="white" />
+        <rect
+          x="0.75"
+          y="0.75"
+          width="30.5"
+          height="22.5"
+          rx="3.25"
+          stroke="#002743"
+          stroke-opacity="0.2"
+          stroke-width="1.5"
+        />
+        <g opacity="0.2" clip-path="url(#clip0_188_24558)">
+          <path
+            d="M24 8L20 12L24 16"
+            stroke="#002743"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <rect
+          opacity="0.2"
+          x="4"
+          y="4"
+          width="10"
+          height="16"
+          rx="2"
+          fill="#002743"
+        />
+        <defs>
+          <clipPath id="clip0_188_24558">
+            <rect
+              width="16"
+              height="16"
+              fill="white"
+              transform="translate(14 4)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </div>
+
+  <div class="icons" [ngClass]="collapsed() ?'center-icons':''">
+    <div class="icon">
+      <div class="img dashboard"></div>
+
+      <a
+        routerLink=""
+        [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Dashboard</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img company"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Companies</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img employee"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Employees</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img document"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Documents</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img time"></div>
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Time-off</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img business"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Business Trips</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img properties"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Properties</a
+      >
+    </div>
+
+    <div class="icon">
+      <div class="img expenses"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Expenses</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img request"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Requests</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img task"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Task</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img work"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Work Schedule</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img report"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Report</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img calender"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Calendar</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img payroll"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Payroll</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img switch"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Switch App</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img chat"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Chats</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img help"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Help</a
+      >
+    </div>
+    <div class="icon">
+      <div class="img setting"></div>
+
+      <a [ngClass]="{ appear: !collapsed(), 'non-appear': collapsed() }"
+        >Settings</a
+      >
+    </div>
+  </div>
+</div>

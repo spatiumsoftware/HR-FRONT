@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.row-card {
+  border-radius: 36px;
+  padding: 30px 40px;
+  display: flex;
+  column-gap: 24px;
+  width: 1675px;
+  flex-shrink: 0;
+  background-color: #0acba7;
+}
+
+.img-container {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background-color: #edf0f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+.right {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+hr {
+  color: #edf0f2;
+}
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  column-gap: 48px;
+}
+
+.title:first-child {
+  p:first-child {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  p:nth-child(2) {
+    color: #edf0f2;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  p:first-child {
+    color: #edf0f2;
+    font-size: 14px;
+  }
+  p:nth-child(2) {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+.chart {
+  display: flex;
+  align-items: center;
+
+  column-gap: 8px;
+}
+
+/*chartt*/
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #0acba7;
+}
+.view-btn {
+  width: 140px;
+  height: 48px;
+  border-radius: 36px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+}
+
+@media screen and (max-width: 992px) and (min-width: 800px) {
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  :host ::ng-deep .p-element {
+    width: 100%;
+  }
+  :host ::ng-deep .p-card {
+    width: 90%;
+
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :host ::ng-deep .p-element {
+    width: 100%;
+  }
+  :host ::ng-deep .p-card {
+    width: 90%;
+
+    margin: auto;
+  }
+  :host ::ng-deep .p-card-content .content {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  :host ::ng-deep .p-card-content .inner-content {
+    width: 100%;
+  }
+}
+.row-card.gray {
+  background-color: #ffffff;
+  p:first-child {
+    color: #64748b;
+  }
+  p:nth-child(2) {
+    color: #101218;
+  }
+}

@@ -1,0 +1,42 @@
+.input{
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+}
+textarea{
+    
+    border-radius: 36px;
+    outline: none;
+    border: 1px solid #EDF0F2;
+    background:  #FFF;
+    padding: 12px 16px;
+
+}
+textarea::placeholder{
+    color: #64748B;
+    font-size: 16px;
+    font-weight: 500;
+ }
+label{
+    color: #101218;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+
+ .textarea {
+    width: 100%;
+    font-size: 1em;
+    position: relative;
+  }
+   
+.count {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 0.9em;
+    color: #B8C1CC;
+}
