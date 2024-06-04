@@ -1,66 +1,52 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub-cred')
+        DOCKERHUB_REPO = 'abdelrahman9655/hr-front'
+    }
+
     stages {
-        
-        stage('checkout') {
+        stage('Checkout') {
             steps {
-                echo "Checkouting...."
-                git branch: 'master', credentialsId: 'github', url: 'https://github.com/spatiumsoftware/HR-FRONT.git'      
-                echo "End Checkouting"
-                }
+                git 'https://github.com/spatiumsoftware/HR-FRONT.git'
+            }
         }
-        
+
         stage('Install Dependencies') {
             steps {
-                echo "Run npm install to install all Dependencies"
                 sh 'npm install'
-                echo " Finish install Dependencies"
             }
-        }   
-        stage('Building') {
-            steps {
-                echo "Start Building stage"
-                sh 'npm run build --prod'
-                echo "Finish Building stage"
+        }
 
+        stage('Build') {
+            steps {
+                sh 'npm run build --prod'
             }
         }
-        
-        stage("Build Docker Image"){
-            steps{
-                echo "Building an image from the app"
-                sh 'docker build -t abdelrahman9655/hr-front:$BUILD_NUMBER .'
-            }
-        }
-        
-        stage('Login To Dockerhub'){
-            steps{
-                withCredentials([usernamePassword(credentialsId:'dockerhub-cred', usernameVariable:'USERNAME', passwordVariable: 'PASSWORD')]){
-                sh'echo $PASSWORD | docker login -u $USERNAME --password-stdin'
+
+        stage('Docker Build') {
+            steps {
+                script {
+                    dockerImage = docker.build("${env.DOCKERHUB_REPO}:${env.BUILD_ID}")
                 }
             }
         }
-        
-        stage("Push Docker Image"){
-            steps{
-                echo "Start pushing the image to dockerhub"
-                sh 'docker push abdelrahman9655/hr-front:$BUILD_NUMBER'
-                echo "The image pushed successully"
-            }
-        }
-        
-        stage('Delete Local Image') {
+
+        stage('Docker Push') {
             steps {
-                sh 'docker rmi abdelrahman9655/hr-front:$BUILD_NUMBER'
-                echo "image deleted from the local"
+                script {
+                    docker.withRegistry('https://index.docker.io/v1/', 'DOCKERHUB_CREDENTIALS') {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
+
+        stage('Clean Up') {
+            steps {
+                sh 'docker rmi ${env.DOCKERHUB_REPO}:${env.BUILD_ID}'
             }
         }
     }
-    post{
-        always{
-            sh 'docker logout'
-        }
-    }
-    
 }
