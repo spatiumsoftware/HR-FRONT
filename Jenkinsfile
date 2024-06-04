@@ -1,10 +1,5 @@
 pipeline {
-        agent {
-        docker {
-            //use node image as an agent to run npm commands
-            image 'node:20'
-        }
-    }
+    agent any
 
     stages {
         
